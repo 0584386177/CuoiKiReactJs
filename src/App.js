@@ -1,9 +1,17 @@
 import React from 'react';
+import Page from './components/Page/Page';
+import { Route,Routes } from 'react-router-dom';
+import Men from './components/Men/Men';
+import Women from './components/Women/Women';
 
 const App = () => {
   return (
     <div>
-      
+      <Routes>
+        <Route path='/page' element = {<Page></Page>}></Route>
+        <Route path='/women' element = {<Women></Women>}></Route>
+        <Route path='/men' element={<Men></Men>}></Route>
+      </Routes>
     </div>
   );
 };
