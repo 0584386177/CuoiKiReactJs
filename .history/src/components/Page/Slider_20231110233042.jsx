@@ -69,10 +69,10 @@ const Slider = () => {
     if (ImageIndexCurrent === 0) setImageIndexCurrent(4);
   };
 
-    // setInterval(() => {
-    //   setImageIndexCurrent(ImageIndexCurrent + 1);
-    //   if(ImageIndexCurrent ===4) setImageIndexCurrent(0);
-    // }, 1000);
+    setInterval(() => {
+      setImageIndexCurrent(ImageIndexCurrent + 1);
+      if(ImageIndexCurrent ===4) setImageIndexCurrent(0);
+    }, 1000);
   return (
     <SliderWrapper>
       <div className="image">

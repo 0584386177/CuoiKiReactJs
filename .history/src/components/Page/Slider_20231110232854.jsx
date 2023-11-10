@@ -59,7 +59,7 @@ const Slider = () => {
     "https://file.hstatic.net/1000143422/file/desktop_banner_slider_1920x600_2link_soft_dd3b9719fd3e4818bb108c020a9af7a2.jpg",
   ];
 
-  let [ImageIndexCurrent, setImageIndexCurrent] = useState(0);
+  const [ImageIndexCurrent, setImageIndexCurrent] = useState(0);
   const handleClickNext = () => {
     setImageIndexCurrent(ImageIndexCurrent + 1);
     if (ImageIndexCurrent === 4) setImageIndexCurrent(0);
@@ -69,10 +69,7 @@ const Slider = () => {
     if (ImageIndexCurrent === 0) setImageIndexCurrent(4);
   };
 
-    // setInterval(() => {
-    //   setImageIndexCurrent(ImageIndexCurrent + 1);
-    //   if(ImageIndexCurrent ===4) setImageIndexCurrent(0);
-    // }, 1000);
+    setInterval
   return (
     <SliderWrapper>
       <div className="image">

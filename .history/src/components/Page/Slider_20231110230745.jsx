@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const SliderWrapper = styled.div`
   width: 100%;
-  height :800px;
+  hegith :100%;
   position: relative;
 `;
 const SliderButton = styled.div`
@@ -46,8 +46,7 @@ const ArrivalsTitle = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    margin: 5rem 0px;
-    font-size: 40px;
+    padding: 10px 0px;
   }
 `
 const Slider = () => {
@@ -59,7 +58,7 @@ const Slider = () => {
     "https://file.hstatic.net/1000143422/file/desktop_banner_slider_1920x600_2link_soft_dd3b9719fd3e4818bb108c020a9af7a2.jpg",
   ];
 
-  let [ImageIndexCurrent, setImageIndexCurrent] = useState(0);
+  const [ImageIndexCurrent, setImageIndexCurrent] = useState(0);
   const handleClickNext = () => {
     setImageIndexCurrent(ImageIndexCurrent + 1);
     if (ImageIndexCurrent === 4) setImageIndexCurrent(0);
@@ -68,11 +67,6 @@ const Slider = () => {
     setImageIndexCurrent(ImageIndexCurrent - 1);
     if (ImageIndexCurrent === 0) setImageIndexCurrent(4);
   };
-
-    // setInterval(() => {
-    //   setImageIndexCurrent(ImageIndexCurrent + 1);
-    //   if(ImageIndexCurrent ===4) setImageIndexCurrent(0);
-    // }, 1000);
   return (
     <SliderWrapper>
       <div className="image">
@@ -87,7 +81,7 @@ const Slider = () => {
         </SliderNext>
       </SliderButton>
       <ArrivalsTitle>
-        <h1>NEW ARRIVALS</h1>
+        <h1>New Arrivals</h1>
       </ArrivalsTitle>
 
     </SliderWrapper>

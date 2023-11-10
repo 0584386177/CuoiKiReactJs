@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const SliderWrapper = styled.div`
   width: 100%;
-  height :800px;
+  height: 100%;
   position: relative;
 `;
 const SliderButton = styled.div`
@@ -38,18 +38,6 @@ const SliderPre = styled.button`
   font-size: 20px;
   cursor: pointer;
 `;
-const ArrivalsTitle = styled.div`
-  position: relative;
-
-  h1{
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    margin: 5rem 0px;
-    font-size: 40px;
-  }
-`
 const Slider = () => {
   const arrayImage = [
     "https://file.hstatic.net/1000143422/file/desktop_banner_slider_1920x600_2link_ult-trn_4b3327ceb7184530ae9783ad00500c46.jpg",
@@ -59,7 +47,7 @@ const Slider = () => {
     "https://file.hstatic.net/1000143422/file/desktop_banner_slider_1920x600_2link_soft_dd3b9719fd3e4818bb108c020a9af7a2.jpg",
   ];
 
-  let [ImageIndexCurrent, setImageIndexCurrent] = useState(0);
+  const [ImageIndexCurrent, setImageIndexCurrent] = useState(0);
   const handleClickNext = () => {
     setImageIndexCurrent(ImageIndexCurrent + 1);
     if (ImageIndexCurrent === 4) setImageIndexCurrent(0);
@@ -68,11 +56,6 @@ const Slider = () => {
     setImageIndexCurrent(ImageIndexCurrent - 1);
     if (ImageIndexCurrent === 0) setImageIndexCurrent(4);
   };
-
-    // setInterval(() => {
-    //   setImageIndexCurrent(ImageIndexCurrent + 1);
-    //   if(ImageIndexCurrent ===4) setImageIndexCurrent(0);
-    // }, 1000);
   return (
     <SliderWrapper>
       <div className="image">
@@ -86,9 +69,7 @@ const Slider = () => {
           <i class="fa-solid fa-arrow-right"></i>
         </SliderNext>
       </SliderButton>
-      <ArrivalsTitle>
-        <h1>NEW ARRIVALS</h1>
-      </ArrivalsTitle>
+      <h1>NEW ARRIVALS</h1>
 
     </SliderWrapper>
   );

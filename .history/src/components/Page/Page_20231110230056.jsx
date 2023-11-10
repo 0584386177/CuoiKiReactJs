@@ -4,10 +4,8 @@ import styled from 'styled-components';
 import Slider from './Slider';
 import NewArrivals from './NewArrivals';
 const PageWrapper = styled.div`
-    width: 100%;
+    min-width: 100%;
     height: 100vh;
-    max-width:1980px;
-    margin: 0 auto;
     
 `
 const Page = () => {
@@ -15,7 +13,7 @@ const Page = () => {
         <PageWrapper>
         <Header/>
         <Slider/>
-        <NewArrivals/>
+        <NewArrivals
         </PageWrapper>
     );
 };
