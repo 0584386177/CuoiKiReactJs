@@ -1,8 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Filter from './Filter';
-import Navigation from './Navigation';
-import ProductsList from './ProductsList';
 const MenWrapper = styled.div`
     width:100%;
     height: 100%;
@@ -29,13 +26,10 @@ const Men = () => {
             <MenImage>
             <MenImg src='https://file.hstatic.net/1000143422/collection/banner_wlp_1600x400_57f904dca4544bdba60544e6b6eb655a_master.jpg'/>
             </MenImage>
-            <MenTitle>Women</MenTitle>
-            <Navigation/>
-            <Filter/>
-            <ProductsList/>
-         </MenWrapper>
-                </div>
+            <MenTitle>Men</MenTitle>
+        </MenWrapper>
+        </div>
     );
 };
 
-export default Men;  
+export default Men; 

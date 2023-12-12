@@ -28,6 +28,8 @@ const ItemImg = styled.img`
 `
 const ProductsList = () => {
     const product = useContext(Context);
+    const [filteredProducts, setFilteredProducts] = useState ( [] );
+
     console.log(product);
     return (
         <div>

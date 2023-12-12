@@ -1,8 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Filter from './Filter';
-import Navigation from './Navigation';
-import ProductsList from './ProductsList';
 const MenWrapper = styled.div`
     width:100%;
     height: 100%;
@@ -33,9 +30,9 @@ const Men = () => {
             <Navigation/>
             <Filter/>
             <ProductsList/>
-         </MenWrapper>
-                </div>
+        </MenWrapper>
+        </div>
     );
 };
 
-export default Men;  
+export default Men; 

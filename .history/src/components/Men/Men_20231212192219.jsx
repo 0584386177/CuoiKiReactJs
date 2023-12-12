@@ -33,7 +33,7 @@ const Men = () => {
             <Navigation/>
             <Filter/>
             <ProductsList/>
-         </MenWrapper>
+         </MenWrapper>s
                 </div>
     );
 };

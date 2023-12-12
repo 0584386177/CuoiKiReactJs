@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Context from '../../Context';
 import styled from 'styled-components';
 
@@ -28,6 +28,10 @@ const ItemImg = styled.img`
 `
 const ProductsList = () => {
     const product = useContext(Context);
+    const [filteredProducts, setFilteredProducts] = useState( [] );
+   
+  
+  
     console.log(product);
     return (
         <div>
@@ -50,3 +54,4 @@ const ProductsList = () => {
 };
 
 export default ProductsList;
+                       

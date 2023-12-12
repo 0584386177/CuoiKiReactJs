@@ -43,7 +43,7 @@ const ProductsList = () => {
                 <h4>{item?.name}</h4>
               </Item>
             );
-          })}
+          })}}
             </List>
         </div>
     );
